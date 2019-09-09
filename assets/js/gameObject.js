@@ -20,10 +20,10 @@ class GameObject {
 
     draw() {
         push();
-        scale(...this.transform.scale.asArray());
+        translate(this.transform.position);
         rotate(this.transform.rotation);
-        translate(...this.transform.position.asArray());
-        ellipse(0, 0, 50, 40);
+        scale(this.transform.scale);
+        triangle(-20, -20, -20, 20, 20, 0);
         pop();
     }
 }

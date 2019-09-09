@@ -13,7 +13,6 @@ function setup() {
     createCanvas(1280, 720);
 
     let ellipse = new GameObject();
-    ellipse.transform.position.x = 300;
     ellipse.components.push(new FollowMouseBehaviour(ellipse));
 
     gameObjects['ellipse'] = ellipse;

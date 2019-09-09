@@ -6,22 +6,11 @@
  * Utilities for 2D transformations
  */
 
-class Vector2 {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    asArray() {
-        return Array.from({0: this.x, 1: this.y, length: 2});
-    }
-}
-
 class Transform2D {
     constructor(px, py, r, sx, sy) {
-        this.position = new Vector2(px, py);
+        this.position = createVector(px, py);
         this.rotation = r;
-        this.scale = new Vector2(sx, sy);;
+        this.scale = createVector(sx, sy);;
     }
 
     static identity() {

@@ -6,10 +6,23 @@
  * Behaviour to make gameObject follow mouse clicks
  */
 
- class FollowMouseBehaviour extends Component {
-     update() {
-         if (mouseIsPressed) {
-            this.gameObject.transform.position = new Vector2(mouseX, mouseY)
-         }
-     }
- }
+const FOLLOW_RATE = 0.01;
+
+class FollowMouseBehaviour extends Component {
+    constructor(gameObject) {
+        super(gameObject);
+
+        this.previousMouse = createVector(0, 0);
+        this.percentThrough = 0;
+        this.gameObject.transform.position = createVector(300, 300);
+    }
+
+    update() {
+        this.percentThrough += FOLLOW_RATE;
+        if (mouseIsPressed) {
+            this.percentThrough = 0;
+            this.previousMouse = createVector(mouseX, mouseY);
+        }
+        this.gameObject.transform.position = this.gameObject.transform.position.lerp(this.previousMouse, this.percentThrough);
+    }
+}

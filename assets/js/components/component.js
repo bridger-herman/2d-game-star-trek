@@ -6,12 +6,11 @@
  * Abstract component for a GameObject. All components should have an update()
  */
 
- class Component {
-     constructor(gameObject) {
-         // Pointer to parent game object
-         this.gameObject = gameObject;
-         console.log(gameObject);
-     }
+class Component {
+    constructor(gameObject) {
+        // Pointer to parent game object
+        this.gameObject = gameObject;
+    }
 
-     update() {}
- }
+    update() { }
+}
