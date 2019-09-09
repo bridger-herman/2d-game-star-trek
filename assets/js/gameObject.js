@@ -9,10 +9,13 @@
 class GameObject {
     constructor() {
         this.transform = Transform2D.identity();
+        this.components = [];
     }
 
     update() {
-        this.transform.position.y++;
+        for (let c in this.components) {
+            this.components[c].update();
+        }
     }
 
     draw() {
@@ -23,6 +26,4 @@ class GameObject {
         ellipse(0, 0, 50, 40);
         pop();
     }
-
-
 }
