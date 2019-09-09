@@ -12,17 +12,17 @@ class FollowMouseBehaviour extends Component {
     constructor(gameObject) {
         super(gameObject);
 
-        this.previousMouse = createVector(0, 0);
-        this.percentThrough = 0;
+        this.nextTF = Transform2D.identity();
+        this.percentThrough = 0.0;
         this.gameObject.transform.position = createVector(300, 300);
     }
 
     update() {
         this.percentThrough += FOLLOW_RATE;
         if (mouseIsPressed) {
-            this.percentThrough = 0;
-            this.previousMouse = createVector(mouseX, mouseY);
+            this.percentThrough = 0.0;
+            this.nextTF.position = createVector(mouseX, mouseY);
         }
-        this.gameObject.transform.position = this.gameObject.transform.position.lerp(this.previousMouse, this.percentThrough);
+        this.gameObject.transform = this.gameObject.transform.lerp(this.nextTF, this.percentThrough);
     }
 }

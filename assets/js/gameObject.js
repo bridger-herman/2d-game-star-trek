@@ -23,7 +23,7 @@ class GameObject {
         translate(this.transform.position);
         rotate(this.transform.rotation);
         scale(this.transform.scale);
-        triangle(-20, -20, -20, 20, 20, 0);
+        triangle(-20, -20, -20, 20, 40, 0);
         pop();
     }
 }
