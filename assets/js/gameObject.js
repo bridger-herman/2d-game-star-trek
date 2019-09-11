@@ -10,6 +10,11 @@ class GameObject {
     constructor() {
         this.transform = Transform2D.identity();
         this.components = [];
+        this._renderer = null;
+    }
+
+    set renderer(r) {
+        this._renderer = r;
     }
 
     update() {
@@ -19,12 +24,8 @@ class GameObject {
     }
 
     draw() {
-        // this.transform.debugDraw();
-        push();
-        translate(this.transform.position);
-        rotate(this.transform.rotation);
-        scale(this.transform.scale);
-        triangle(-20, -20, -20, 20, 40, 0);
-        pop();
+        if (this._renderer != null) {
+            this._renderer.draw();
+        }
     }
 }

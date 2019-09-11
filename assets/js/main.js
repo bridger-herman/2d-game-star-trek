@@ -12,11 +12,12 @@ let gameObjects = {};
 function setup() {
     createCanvas(800, 800);
 
-    let ellipse = new GameObject();
-    ellipse.components.push(new FollowMouseBehaviour(ellipse));
-    ellipse.transform.position = createVector(50, 50);
+    let player = new GameObject();
+    player.components.push(new FollowMouseBehaviour(player));
+    player.transform.position = createVector(50, 50);
+    player.renderer = new Renderer('triangle');
 
-    gameObjects['ellipse'] = ellipse;
+    gameObjects['player'] = ellipse;
 }
 
 function draw() {
