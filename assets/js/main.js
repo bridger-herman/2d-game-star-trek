@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-    // background(BACKGROUND_COLOR);
+    background(BACKGROUND_COLOR);
 
     // Update loop
     for (let go in gameObjects) {
@@ -28,7 +28,7 @@ function draw() {
     }
 
     // Draw loop
-    // for (let go in gameObjects) {
-    //     gameObjects[go].draw();
-    // }
+    for (let go in gameObjects) {
+        gameObjects[go].draw();
+    }
 }

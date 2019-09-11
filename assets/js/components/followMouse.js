@@ -6,23 +6,25 @@
  * Behaviour to make gameObject follow mouse clicks
  */
 
-const TURN_LENGTH = 50;
-const TURN_ANGLE = Math.PI / 6;
+const TIME_SCALE = 0.01;
 
 class FollowMouseBehaviour extends Component {
     constructor(gameObject) {
         super(gameObject);
 
         this.mouseDown = false;
-        this.keyframes = [];
+        this.currentTime = 0.0;
+        this.currentCurve = null;
     }
 
     update() {
+        this.currentTime += TIME_SCALE;
         if (mouseIsPressed) {
             this.mouseDown = true;
         }
         // Only trigger it once
         if (!mouseIsPressed && this.mouseDown) {
+            this.currentTime = 0.0;
             this.mouseDown = false;
             let mousePos = createVector(mouseX, mouseY);
 
@@ -53,16 +55,15 @@ class FollowMouseBehaviour extends Component {
 
             // Create the Bezier curve, starting at current pos and ending at
             // mouse click
-            let curve = new CubicBezierCurve([
+            this.currentCurve = new CubicBezierCurve([
                 this.gameObject.transform.position,
                 p1,
                 p2,
                 mousePos,
             ]);
-            
-            for (let t = 0; t <= 1.0; t += 0.01) {
-                curve.transformAt(t).debugDraw();
-            }
+        }
+        if (this.currentCurve != null) {
+            this.gameObject.transform = this.currentCurve.transformAt(this.currentTime);
         }
     }
 }

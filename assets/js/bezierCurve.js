@@ -17,24 +17,31 @@ class CubicBezierCurve {
 
     // Get the (interpolated) transform at a given `t`
     transformAt(t) {
-        let scaled = t * NUM_POINTS;
-        let lowIndex = Math.floor(scaled);
-        let highIndex = lowIndex + 1;
-        let percentInside = scaled - lowIndex;
-        return this.transformKeyframes[lowIndex].lerp(this.transformKeyframes[highIndex], percentInside);
+        if (t > 1.0) {
+            return this.transformKeyframes[this.transformKeyframes.length - 1];
+        } else if (t < 0.0) {
+            return this.transformKeyframes[0];
+        } else {
+            let scaled = t * NUM_POINTS;
+            let lowIndex = Math.floor(scaled);
+            let highIndex = lowIndex + 1;
+            let percentInside = scaled - lowIndex;
+            return this.transformKeyframes[lowIndex].lerp(this.transformKeyframes[highIndex], percentInside);
+        }
     }
 
     // Generate transforms for each point in the curve so we can nicely
     // interpolate
     _generateKeyframes() {
         let keyframes = [];
-        for (let i = 0; i < this.vertices.length; i++) {
-            // Prevent us from going off the end
-            let v = i < this.vertices.length - 1 ? i : this.vertices.length - 2;
-
+        for (let v = 0; v < this.vertices.length; v++) {
             let tf = Transform2D.identity();
             tf.position = this.vertices[v];
-            tf.forward = p5.Vector.sub(this.vertices[v + 1], this.vertices[v]).normalize();
+            if (v < this.vertices.length - 1) {
+                tf.forward = p5.Vector.sub(this.vertices[v + 1], this.vertices[v]).normalize();
+            } else {
+                tf.forward = p5.Vector.sub(this.vertices[v], this.vertices[v - 1]).normalize();
+            }
             keyframes.push(tf);
         }
         return keyframes;
