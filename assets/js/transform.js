@@ -40,4 +40,20 @@ class Transform2D {
     set scale(newScale) {
         this._scale = newScale;
     }
+    set forward(newForward) {
+        this._forward = newForward.copy().normalize();
+        this._rotation = this._forward.heading();
+    }
+
+    debugDraw() {
+        strokeWeight(5);
+        stroke(0);
+        point(this._position.x, this._position.y);
+        let arrowLen = 50;
+        strokeWeight(2);
+        line(this._position.x, this._position.y,
+            this._position.x + arrowLen * this._forward.x,
+            this._position.y + arrowLen * this._forward.y
+        );
+    }
 }

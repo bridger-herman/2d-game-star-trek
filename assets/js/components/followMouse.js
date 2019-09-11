@@ -7,27 +7,27 @@
  */
 
 const TURN_LENGTH = 50;
-const TURN_ANGLE = Math.PI/6;
+const TURN_ANGLE = Math.PI / 6;
 
 class FollowMouseBehaviour extends Component {
     constructor(gameObject) {
         super(gameObject);
 
-        this.nextTF = Transform2D.identity();
         this.mouseDown = false;
+        this.keyframes = [];
     }
 
     update() {
         if (mouseIsPressed) {
             this.mouseDown = true;
         }
+        // Only trigger it once
         if (!mouseIsPressed && this.mouseDown) {
             this.mouseDown = false;
-            // this.updating = true;
-            this.nextTF.position = createVector(mouseX, mouseY);
+            let mousePos = createVector(mouseX, mouseY);
 
             // Find vector to the clicked point
-            let toNext = p5.Vector.sub(this.nextTF.position, this.gameObject.transform.position);
+            let toNext = p5.Vector.sub(mousePos, this.gameObject.transform.position);
             let toNextDir = toNext.copy().normalize();
             let toNextMag = toNext.mag();
 
@@ -51,26 +51,18 @@ class FollowMouseBehaviour extends Component {
                 )
             );
 
-            strokeWeight(5);
-            stroke(0);
-            point(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
-            stroke(255, 0, 0);
-            point(p1.x, p1.y);
-            stroke(0, 255, 0);
-            point(p2.x, p2.y);
-            stroke(0, 0, 255);
-            point(this.nextTF.position.x, this.nextTF.position.y);
-
             // Create the Bezier curve, starting at current pos and ending at
             // mouse click
-            let proposedTurn = new CubicBezierCurve([
+            let curve = new CubicBezierCurve([
                 this.gameObject.transform.position,
                 p1,
                 p2,
-                this.nextTF.position,
+                mousePos,
             ]);
-
-            proposedTurn.draw();
+            
+            for (let t = 0; t <= 1.0; t += 0.01) {
+                curve.transformAt(t).debugDraw();
+            }
         }
     }
 }
