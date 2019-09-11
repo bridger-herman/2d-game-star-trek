@@ -6,7 +6,7 @@
  * Behaviour to make gameObject follow mouse clicks
  */
 
-const TIME_SCALE = 0.01;
+const TIME_SCALE = 0.05;
 
 class FollowMouseBehaviour extends Component {
     constructor(gameObject) {

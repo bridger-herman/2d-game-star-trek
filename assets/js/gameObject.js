@@ -19,6 +19,7 @@ class GameObject {
     }
 
     draw() {
+        // this.transform.debugDraw();
         push();
         translate(this.transform.position);
         rotate(this.transform.rotation);

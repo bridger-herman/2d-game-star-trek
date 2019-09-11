@@ -10,7 +10,7 @@ const BACKGROUND_COLOR = '#FFFFFF';
 let gameObjects = {};
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(800, 800);
 
     let ellipse = new GameObject();
     ellipse.components.push(new FollowMouseBehaviour(ellipse));
