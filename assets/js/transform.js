@@ -8,9 +8,10 @@
 
 class Transform2D {
     constructor(pos, rot, scale) {
-        this.position = pos;
-        this.rotation = rot;
-        this.scale = scale;
+        this._position = pos;
+        this._rotation = rot;
+        this._scale = scale;
+        this._forward = p5.Vector.fromAngle(rot);
     }
 
     static identity() {
@@ -18,9 +19,25 @@ class Transform2D {
     }
 
     lerp(other, t) {
-        let pos = p5.Vector.lerp(this.position, other.position, t);
-        let angle = (other.rotation - this.rotation) * t + this.rotation;
-        let scale = p5.Vector.lerp(this.scale, other.scale, t);
+        let pos = p5.Vector.lerp(this._position, other._position, t);
+        let angle = (other._rotation - this._rotation) * t + this._rotation;
+        let scale = p5.Vector.lerp(this._scale, other._scale, t);
         return new Transform2D(pos, angle, scale);
+    }
+
+    get position() { return this._position; }
+    get rotation() { return this._rotation; }
+    get scale() { return this._scale; }
+    get forward() { return this._forward; }
+
+    set position(newPosition) {
+        this._position = newPosition;
+    }
+    set rotation(newRotation) {
+        this._rotation = newRotation;
+        this._forward = p5.Vector.fromAngle(this._rotation);
+    }
+    set scale(newScale) {
+        this._scale = newScale;
     }
 }
