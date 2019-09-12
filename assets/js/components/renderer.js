@@ -14,9 +14,9 @@ class Renderer {
 
     draw() {
         push();
-        translate(this.gameObject.transform.position);
-        rotate(this.gameObject.transform.rotation);
-        scale(this.gameObject.transform.scale);
+        translate(this._gameObject.transform.position);
+        rotate(this._gameObject.transform.rotation);
+        scale(this._gameObject.transform.scale);
         if (this._name == 'triangle') {
             triangle(-20, -20, -20, 20, 40, 0);
         } else {

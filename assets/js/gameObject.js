@@ -9,7 +9,7 @@
 class GameObject {
     constructor() {
         this.transform = Transform2D.identity();
-        this.components = [];
+        this._components = {};
         this._renderer = null;
     }
 
@@ -17,9 +17,17 @@ class GameObject {
         this._renderer = r;
     }
 
+    addComponent(component) {
+        this._components[component.constructor.name] = component;
+    }
+
+    getComponent(component) {
+        return this._components[component];
+    }
+
     update() {
-        for (let c in this.components) {
-            this.components[c].update();
+        for (let c in this._components) {
+            this._components[c].update();
         }
     }
 

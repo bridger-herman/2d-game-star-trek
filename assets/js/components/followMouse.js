@@ -41,10 +41,13 @@ class FollowMouseBehaviour extends Component {
             }
 
             // Create the intermediate points for the Bezier Curve
+            // First point is straight forward along current heading
             let p1 = p5.Vector.add(
                 this.gameObject.transform.position,
                 p5.Vector.mult(this.gameObject.transform.forward, toNextMag / 3),
             );
+            // Second point is along the line from current position to click,
+            // and offset by a little
             let p2 = p5.Vector.add(
                 this.gameObject.transform.position,
                 p5.Vector.add(
