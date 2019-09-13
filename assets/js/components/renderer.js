@@ -13,15 +13,35 @@ class Renderer {
     }
 
     draw() {
-        push();
-        translate(this._gameObject.transform.position);
-        rotate(this._gameObject.transform.rotation);
-        scale(this._gameObject.transform.scale);
+        let tf = this._gameObject.transform;
+        let tfChain = [];
+        let tfCount = 0;
+
+        // Push the parent matrices onto the stack
+        while (tf != null) {
+            tfChain.push(tf);
+            tf = tf.parent;
+            tfCount++;
+        }
+
+        // Apply parents first, then children
+        for (let i = tfCount - 1; i >= 0; i--) {
+            push();
+            translate(tfChain[i].position);
+            rotate(tfChain[i].rotation);
+            scale(tfChain[i].scale);
+        }
+
+        // Draw the thing
         if (this._name == 'triangle') {
             triangle(-20, -20, -20, 20, 40, 0);
         } else {
             circle(0, 0, 40);
         }
-        pop();
+
+        // Pop the parent matrices
+        for (let i = 0; i < tfCount; i++) {
+            pop();
+        }
     }
 }

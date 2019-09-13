@@ -16,6 +16,11 @@ function setup() {
     player.transform.position = createVector(50, 50);
     player.renderer = new Renderer(player, 'triangle');
 
+    let turret = GameObjectManager.instantiate('turret');
+    turret.renderer = new Renderer(turret, 'turret');
+    turret.transform.parent = player.transform;
+    turret.transform.scale = createVector(0.5, 0.5);
+
     let enemy = GameObjectManager.instantiate('enemy');
     enemy.addComponent(new MouseCollider(enemy, 40));
     enemy.addComponent(new Health(enemy, 10));

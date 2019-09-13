@@ -8,6 +8,7 @@
 
 class Transform2D {
     constructor(pos, rot, scale) {
+        this.parent = null;
         this._position = pos;
         this._rotation = rot;
         this._scale = scale;
@@ -16,6 +17,15 @@ class Transform2D {
 
     static identity() {
         return new Transform2D(createVector(0, 0), 0, createVector(1, 1));
+    }
+
+    copy() {
+        let newTF = Transform2D.identity();
+        newTF.parent = this.parent;
+        newTF._position = this._position.copy();
+        newTF._rotation = this._rotation;
+        newTF._scale = this._scale.copy();
+        return newTF;
     }
 
     lerp(other, t) {

@@ -9,13 +9,24 @@
 class GameObject {
     constructor(name) {
         this.name = name;
-        this.transform = Transform2D.identity();
+        this._transform = Transform2D.identity();
         this._components = {};
         this._renderer = null;
     }
 
     set renderer(r) {
         this._renderer = r;
+    }
+
+    set transform(tf) {
+        this._transform.parent = tf.parent;
+        this._transform.position = tf.position;
+        this._transform.scale = tf.scale;
+        this._transform.rotation = tf.rotation;
+    }
+
+    get transform() {
+        return this._transform;
     }
 
     addComponent(component) {
