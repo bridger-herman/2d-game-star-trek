@@ -66,8 +66,17 @@ class CubicBezierCurve {
     }
 
     draw() {
+		
+		strokeWeight(30);
+		stroke(0, 255, 255);
+		for (let i = 0; i < this.controlPoints.length; i++) {
+            point(this.controlPoints[i].x, this.controlPoints[i].y);
+        }
+		stroke(0);
+
         for (let i = 0; i < this.vertices.length; i++) {
             point(this.vertices[i].x, this.vertices[i].y);
         }
+		strokeWeight(1);
     }
 }
