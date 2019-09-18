@@ -35,8 +35,10 @@ class Renderer {
         // Draw the thing
         if (this._name == 'triangle') {
             triangle(-20, -20, -20, 20, 40, 0);
+        } else if (this._name == 'photon') {
+            circle(0, 0, 10);
         } else {
-            circle(0, 0, 40);
+            rect(-25, -15, 50, 30);
         }
 
         // Pop the parent matrices

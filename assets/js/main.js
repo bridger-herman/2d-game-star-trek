@@ -20,6 +20,8 @@ function setup() {
     turret.renderer = new Renderer(turret, 'turret');
     turret.transform.parent = player.transform;
     turret.transform.scale = createVector(0.5, 0.5);
+    turret.addComponent(new KeyboardRotateBehaviour(turret));
+    turret.addComponent(new PhotonLauncher(turret));
 
     let enemy = GameObjectManager.instantiate('enemy');
     enemy.addComponent(new MouseCollider(enemy, 40));

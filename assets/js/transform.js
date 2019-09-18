@@ -40,6 +40,29 @@ class Transform2D {
     get scale() { return this._scale; }
     get forward() { return this._forward; }
 
+    get globalPosition() {
+        let pos = createVector(0, 0);
+        let tf = this;
+        while (tf != null) {
+            pos.add(tf.position);
+            tf = tf.parent;
+        }
+        return pos;
+    }
+    get globalRotation() {
+        let rot = 0.0;
+        let tf = this;
+        while (tf != null) {
+            rot += tf.rotation;
+            tf = tf.parent;
+        }
+        return rot;
+    }
+    get globalForward() {
+        let globalRot = this.globalRotation;
+        return p5.Vector.fromAngle(globalRot);
+    }
+
     set position(newPosition) {
         this._position = newPosition;
     }
