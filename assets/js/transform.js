@@ -77,6 +77,17 @@ class Transform2D {
         this._forward = newForward.copy().normalize();
         this._rotation = this._forward.heading();
     }
+    set globalForward(newForward) {
+	    let newGlobalRot = p5.Vector.angleBetween(createVector(1, 0), newForward);
+	    this.
+//        let pos = createVector(0, 0);
+//        let tf = this;
+//        while (tf != null) {
+//            pos.add(tf.position);
+//            tf = tf.parent;
+//        }
+//        return pos;
+    }
 
     debugDraw() {
         strokeWeight(5);
