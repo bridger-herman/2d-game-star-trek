@@ -7,9 +7,10 @@
  */
 
 class RotateToMouse extends Component {
-	update() {
-		let mouseLoc = createVector(mouseX, mouseY);
-		let toMouse = p5.Vector.sub(mouseLoc, this.gameObject.transform.globalPosition).normalize();
-		this.gameObject.transform.forward = toMouse;
-	}
+    update() {
+        let mouseLoc = createVector(mouseX, mouseY);
+        let toMouse = p5.Vector.sub(mouseLoc,
+            this.gameObject.transform.globalPosition).normalize();
+        this.gameObject.transform.globalForward = toMouse;
+    }
 }

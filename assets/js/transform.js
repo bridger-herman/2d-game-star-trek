@@ -78,26 +78,31 @@ class Transform2D {
         this._rotation = this._forward.heading();
     }
     set globalForward(newForward) {
-	    let newGlobalRot = p5.Vector.angleBetween(createVector(1, 0), newForward);
-	    this.
-//        let pos = createVector(0, 0);
-//        let tf = this;
-//        while (tf != null) {
-//            pos.add(tf.position);
-//            tf = tf.parent;
-//        }
-//        return pos;
+        // Find 360 degree angle: https://math.stackexchange.com/a/879474
+        let dot = newForward.x*1 + newForward.y*0;     // dot product
+        let det = newForward.x*0 - newForward.y*1;     // determinant
+        let angle = Math.atan2(det, dot); // atan2(y, x) or atan2(sin, cos)
+        this.globalRotation = -angle;
+    }
+    set globalRotation(newRotation) {
+        let tf = this.parent;
+        let cumulativeRot = 0;
+        while (tf != null) {
+            cumulativeRot += tf.rotation;
+            tf = tf.parent;
+        }
+        this.rotation = newRotation - cumulativeRot;
     }
 
     debugDraw() {
         strokeWeight(5);
         stroke(0);
-        point(this._position.x, this._position.y);
+        point(this.globalPosition.x, this.globalPosition.y);
         let arrowLen = 50;
         strokeWeight(2);
-        line(this._position.x, this._position.y,
-            this._position.x + arrowLen * this._forward.x,
-            this._position.y + arrowLen * this._forward.y
+        line(this.globalPosition.x, this.globalPosition.y,
+            this.globalPosition.x + arrowLen * this.globalForward.x,
+            this.globalPosition.y + arrowLen * this.globalForward.y
         );
     }
 }
