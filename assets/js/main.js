@@ -21,13 +21,12 @@ function setup() {
     turret.transform.parent = player.transform;
     turret.transform.scale = createVector(0.5, 0.5);
     turret.addComponent(new RotateToMouse(turret));
-    turret.addComponent(new PhotonLauncher(turret));
+    turret.addComponent(new PhotonLauncher(turret, 4.0));
 
-    // let enemy = GameObjectManager.instantiate('enemy');
-    // enemy.addComponent(new MouseCollider(enemy, 40));
-    // enemy.addComponent(new Health(enemy, 10));
-    // enemy.transform.position = createVector(width / 2, height / 2);
-    // enemy.renderer = new Renderer(enemy, '');
+    let enemy = GameObjectManager.instantiate('enemy');
+    enemy.addComponent(new Health(enemy, 10));
+    enemy.transform.position = createVector(width / 2, height / 2);
+    enemy.renderer = new Renderer(enemy, '');
 }
 
 function draw() {

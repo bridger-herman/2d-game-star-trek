@@ -7,8 +7,18 @@
  */
 
 class Weapon extends Component {
-    constructor(gameObject, damageAmount) {
-        super(gameObject);
-        this._damageAmount = damageAmount;
+    update() {
+        for (let name in GameObjectManager.gameObjects) {
+            let go = GameObjectManager.gameObjects[name];
+            if (go.getComponent('Health') != null) {
+                let distance =
+                    p5.Vector.sub(this.gameObject.transform.position,
+                        go.transform.position);
+                if (distance.mag() < 10) {
+                    go.getComponent('Health').damage();
+                    GameObjectManager.destroy(this.gameObject.name);
+                }
+            }
+        }
     }
 }
