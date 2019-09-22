@@ -8,28 +8,28 @@
 
 class GameObjectManager {
     static instantiate(name) {
-        GameObjectManager._gameObjects[name] = new GameObject(name);
-        return GameObjectManager._gameObjects[name];
+        GameObjectManager.gameObjects[name] = new GameObject(name);
+        return GameObjectManager.gameObjects[name];
     }
 
     static destroy(name) {
-        delete GameObjectManager._gameObjects[name];
+        delete GameObjectManager.gameObjects[name];
     }
 
     static update() {
         // Update loop
-        for (let go in GameObjectManager._gameObjects) {
-            GameObjectManager._gameObjects[go].update();
+        for (let go in GameObjectManager.gameObjects) {
+            GameObjectManager.gameObjects[go].update();
         }
     }
 
     static draw() {
         // Draw loop
-        for (let go in GameObjectManager._gameObjects) {
-            GameObjectManager._gameObjects[go].draw();
+        for (let go in GameObjectManager.gameObjects) {
+            GameObjectManager.gameObjects[go].draw();
         }
     }
 }
 
-// Set the field "_gameObjects" so it can be used statically
-GameObjectManager._gameObjects = {};
+// Set the field "gameObjects" so it can be used statically
+GameObjectManager.gameObjects = {};

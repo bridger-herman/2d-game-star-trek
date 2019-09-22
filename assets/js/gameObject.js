@@ -9,6 +9,7 @@
 class GameObject {
     constructor(name) {
         this.name = name;
+        this.tags = [];
         this._transform = Transform2D.identity();
         this._components = {};
         this._renderer = null;

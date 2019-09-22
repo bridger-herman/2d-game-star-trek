@@ -14,7 +14,7 @@ class Health extends Component {
 
         // Give the MouseCollider a callback function, and make sure `this` is
         // bound correctly
-        this.gameObject.getComponent('MouseCollider').registerCallback(this.damage);
+        // this.gameObject.getComponent('MouseCollider').registerCallback(this.damage);
     }
 
     // Arrow function to preserve `this` context

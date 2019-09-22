@@ -14,6 +14,7 @@ class PhotonLauncher extends Component {
             photon.renderer = new Renderer(photon, 'photon');
             photon.transform.position = this.gameObject.transform.globalPosition;
             photon.addComponent(new Velocity(photon, this.gameObject.transform.globalForward));
+            photon.addComponent(new DestroySelfOutsideScreen(photon));
         }
     }
 }
