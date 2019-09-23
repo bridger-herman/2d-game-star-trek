@@ -14,7 +14,7 @@ class Weapon extends Component {
                 let distance =
                     p5.Vector.sub(this.gameObject.transform.position,
                         go.transform.position);
-                if (distance.mag() < 10) {
+                if (distance.mag() < 50) {
                     go.getComponent('Health').damage();
                     GameObjectManager.destroy(this.gameObject.name);
                 }

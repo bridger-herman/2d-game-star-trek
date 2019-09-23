@@ -19,12 +19,12 @@ class EnemySpawner extends Component {
         if (Date.now() - this._spawned > SPAWN_TIME * (Math.random() * 2 + 2)) {
             this._spawned = Date.now();
             let enemy = GameObjectManager.instantiate('enemy' + Date.now());
-            enemy.addComponent(new Health(enemy, 10));
+            enemy.addComponent(new Health(enemy, 20));
             enemy.addComponent(new DestroySelfOutsideScreen(enemy));
             enemy.addComponent(new Velocity(enemy, createVector(ENEMY_SPEED * (Math.random()
                             - 0.5), ENEMY_SPEED * (Math.random() - 0.5))));
-            enemy.transform.position = createVector(width / 2, height / 2);
-            enemy.renderer = new Renderer(enemy, '');
+            enemy.transform.position = createVector(Math.random() * width, Math.random() * height);
+            enemy.renderer = new Renderer(enemy, 'enemy');
         }
     }
 }

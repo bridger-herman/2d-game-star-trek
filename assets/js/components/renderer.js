@@ -7,9 +7,11 @@
  */
 
 let enterprise;
+let borg;
 
 function preload() {
     enterprise = loadImage('assets/img/enterprise.png');
+    borg = loadImage('assets/img/borg3.jpg');
 }
 
 class Renderer {
@@ -41,16 +43,12 @@ class Renderer {
         // Draw the thing
         if (this._name == 'enterprise') {
             image(enterprise, -300 / 2, -170 / 2, 300, 170);
-        } else if (this._name == 'photonLauncher') {
-            triangle(0, -20, 0, 20, 20, 0);
-        } else if (this._name == 'photonLauncherRenderer') {
+        } else if (this._name == 'photonLauncherRenderer' || this._name == 'photon') {
             fill('#ff7f0c');
             noStroke();
             circle(0, 0, 10);
-        } else if (this._name == 'photon') {
-            circle(0, 0, 10);
-        } else {
-            rect(-25, -15, 50, 30);
+        } else if (this._name == 'enemy') {
+            image(borg, -50, -50, 100, 100);
         }
 
         // Pop the parent matrices

@@ -6,8 +6,8 @@
  * Main game logic
  */
 
-// const BACKGROUND_COLOR = '#000000';
-const BACKGROUND_COLOR = '#FFFFFF';
+const BACKGROUND_COLOR = '#000000';
+// const BACKGROUND_COLOR = '#FFFFFF';
 
 function setup() {
     createCanvas(800, 800);
