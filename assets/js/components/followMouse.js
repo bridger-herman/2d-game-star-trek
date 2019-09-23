@@ -6,6 +6,8 @@
  * Behaviour to make gameObject follow mouse clicks
  */
 
+var DISPLAY_CURVE = false;
+
 class FollowMouseBehaviour extends Component {
     constructor(gameObject) {
         super(gameObject);
@@ -65,7 +67,9 @@ class FollowMouseBehaviour extends Component {
         }
         if (this.currentCurve != null) {
             this.gameObject.transform = this.currentCurve.transformAt(this.currentTime);
-            // this.currentCurve.draw();
+            if (DISPLAY_CURVE) {
+                this.currentCurve.draw();
+            }
         }
     }
 }

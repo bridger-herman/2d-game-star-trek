@@ -6,6 +6,8 @@
  * Encapsulation for a GameObject (player or enemy)
  */
 
+var DISPLAY_TRANSFORMS = false;
+
 class GameObject {
     constructor(name) {
         this.name = name;
@@ -48,6 +50,10 @@ class GameObject {
     draw() {
         if (this._renderer != null) {
             this._renderer.draw();
+        }
+        if (DISPLAY_TRANSFORMS) {
+            stroke('#47f0bd');
+            this._transform.debugDraw();
         }
     }
 }
