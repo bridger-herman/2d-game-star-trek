@@ -6,6 +6,12 @@
  * Draws something to the screen
  */
 
+let enterprise;
+
+function preload() {
+    enterprise = loadImage('assets/img/enterprise.png');
+}
+
 class Renderer {
     constructor(gameObject, name) {
         this._gameObject = gameObject;
@@ -33,8 +39,14 @@ class Renderer {
         }
 
         // Draw the thing
-        if (this._name == 'triangle') {
-            triangle(-20, -20, -20, 20, 40, 0);
+        if (this._name == 'enterprise') {
+            image(enterprise, -300 / 2, -170 / 2, 300, 170);
+        } else if (this._name == 'photonLauncher') {
+            triangle(0, -20, 0, 20, 20, 0);
+        } else if (this._name == 'photonLauncherRenderer') {
+            fill('#ff7f0c');
+            noStroke();
+            circle(0, 0, 10);
         } else if (this._name == 'photon') {
             circle(0, 0, 10);
         } else {

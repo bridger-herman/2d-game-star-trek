@@ -6,6 +6,7 @@
  * Main game logic
  */
 
+// const BACKGROUND_COLOR = '#000000';
 const BACKGROUND_COLOR = '#FFFFFF';
 
 function setup() {
@@ -14,19 +15,28 @@ function setup() {
     let player = GameObjectManager.instantiate('player');
     player.addComponent(new FollowMouseBehaviour(player));
     player.transform.position = createVector(width / 2, width / 2);
-    player.renderer = new Renderer(player, 'triangle');
 
-    let turret = GameObjectManager.instantiate('turret');
-    turret.renderer = new Renderer(turret, 'turret');
-    turret.transform.parent = player.transform;
-    turret.transform.scale = createVector(0.5, 0.5);
-    turret.addComponent(new RotateToMouse(turret));
-    turret.addComponent(new PhotonLauncher(turret, 4.0));
+    let playerRenderer = GameObjectManager.instantiate('playerRenderer');
+    playerRenderer.renderer = new Renderer(playerRenderer, 'enterprise');
+    playerRenderer.transform.parent = player.transform;
+    playerRenderer.transform.scale = createVector(0.5, 0.5);
 
-    let enemy = GameObjectManager.instantiate('enemy');
-    enemy.addComponent(new Health(enemy, 10));
-    enemy.transform.position = createVector(width / 2, height / 2);
-    enemy.renderer = new Renderer(enemy, '');
+    let photonLauncher = GameObjectManager.instantiate('photonLauncher');
+    photonLauncher.transform.parent = player.transform;
+    photonLauncher.transform.position = createVector(30, 0);
+    photonLauncher.addComponent(new RotateToMouse(photonLauncher));
+
+    let photonLauncherRenderer = GameObjectManager.instantiate('photonLauncherRenderer');
+    photonLauncherRenderer.transform.parent = photonLauncher.transform;
+    photonLauncherRenderer.transform.position = createVector(30, 0);
+    photonLauncherRenderer.renderer = new Renderer(photonLauncherRenderer,
+        'photonLauncherRenderer');
+    photonLauncherRenderer.addComponent(new PhotonLauncher(photonLauncherRenderer, 4.0));
+
+    // let enemy = GameObjectManager.instantiate('enemy');
+    // enemy.addComponent(new Health(enemy, 10));
+    // enemy.transform.position = createVector(width / 2, height / 2);
+    // enemy.renderer = new Renderer(enemy, '');
 }
 
 function draw() {

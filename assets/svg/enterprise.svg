@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="38.107777mm"
+   height="21.528204mm"
+   viewBox="0 0 38.107776 21.528204"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="enterprise.svg"
+   inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6104">
+      <stop
+         style="stop-color:#fdfdfd;stop-opacity:1"
+         offset="0"
+         id="stop6100" />
+      <stop
+         style="stop-color:#fbfbfb;stop-opacity:0"
+         offset="1"
+         id="stop6102" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5994">
+      <stop
+         style="stop-color:#fc9f9f;stop-opacity:1"
+         offset="0"
+         id="stop5990" />
+      <stop
+         style="stop-color:#ff1f1f;stop-opacity:1"
+         offset="1"
+         id="stop5992" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5994"
+       id="linearGradient6000"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.78497702,0,0,1.0012951,-29.66988,-0.67724443)"
+       x1="-65.36084"
+       y1="120.78912"
+       x2="-65.36084"
+       y2="122.67671" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6104"
+       id="linearGradient6106"
+       x1="133.62808"
+       y1="73.417351"
+       x2="141.78983"
+       y2="73.417351"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69054429,0,0,0.56017827,42.614821,32.290544)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5994"
+       id="linearGradient6122"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.78497702,0,0,1.0012951,-29.66988,-0.67724443)"
+       x1="-65.36084"
+       y1="120.78912"
+       x2="-65.36084"
+       y2="122.67671" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6104"
+       id="linearGradient6140"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69054429,0,0,0.56017827,42.085654,32.47188)"
+       x1="133.62808"
+       y1="73.417351"
+       x2="141.78983"
+       y2="73.417351" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.5790725"
+     inkscape:cx="90.049098"
+     inkscape:cy="49.788876"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-106.53802,-62.608296)">
+    <rect
+       y="-34.055618"
+       x="126.71956"
+       height="0.96735436"
+       width="8.741847"
+       id="rect6014"
+       style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.09372091;stroke-opacity:1"
+       ry="0.37571186"
+       transform="rotate(45)"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       transform="rotate(-45)"
+       ry="0.37571186"
+       style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.09372091;stroke-opacity:1"
+       id="rect6042"
+       width="8.741847"
+       height="0.96735436"
+       x="23.115608"
+       y="136.69221"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.17454459;stroke-opacity:1"
+       id="rect821"
+       width="7.6018643"
+       height="3.8584111"
+       x="118.46392"
+       y="71.443192"
+       ry="1.7469625"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <circle
+       style="opacity:1;vector-effect:none;fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.19066748;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path6802"
+       cx="134.41086"
+       cy="73.372398"
+       r="9.8608656"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g6004"
+       transform="matrix(0.99795201,0,0,1.4390625,0.61805531,-35.56243)"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         y="80.179108"
+         x="106.21651"
+         height="1.6343452"
+         width="14.769349"
+         id="rect5996"
+         style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.15834147;stroke-opacity:1"
+         ry="0.63476515" />
+      <path
+         style="fill:url(#linearGradient6000);fill-opacity:1;stroke:#e62727;stroke-width:0.17731258;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5998"
+         sodipodi:type="arc"
+         sodipodi:cx="-80.996277"
+         sodipodi:cy="120.60205"
+         sodipodi:rx="0.79395986"
+         sodipodi:ry="1.2059286"
+         sodipodi:start="0"
+         sodipodi:end="3.1415927"
+         d="m -80.202317,120.60205 a 0.79395986,1.2059286 0 0 1 -0.39698,1.04437 0.79395986,1.2059286 0 0 1 -0.79396,0 0.79395986,1.2059286 0 0 1 -0.39698,-1.04437 l 0.79396,0 z"
+         transform="rotate(-90)" />
+    </g>
+    <ellipse
+       style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.36149043;stroke-opacity:1"
+       id="path819"
+       cx="133.8817"
+       cy="73.372398"
+       rx="10.583356"
+       ry="10.583357" />
+    <path
+       style="fill:url(#linearGradient6140);fill-opacity:1;stroke:none;stroke-width:0.16455889px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134.36176,73.552832 5.63604,-4.362426 v 8.816553 z"
+       id="path6098"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g6114"
+       transform="matrix(0.68562793,0,0,0.68562793,43.21917,23.228308)"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <text
+         y="-0.12006676"
+         id="text6069"
+         style="font-style:normal;font-weight:normal;font-size:0.99827665px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.02495692"
+         xml:space="preserve"><textPath
+           id="textPath6090"
+           startOffset="50%"
+           xlink:href="#path6080"><tspan
+   id="tspan6067"
+   style="text-align:center;text-anchor:middle;stroke-width:0.02495692">USS Enterprise</tspan></textPath></text>
+      <text
+         transform="translate(-0.32740517,-0.11866198)"
+         id="text6073"
+         style="font-style:normal;font-weight:normal;font-size:0.70957839px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.01773946"
+         xml:space="preserve"><textPath
+           id="textPath6084"
+           startOffset="50%"
+           xlink:href="#path6082"><tspan
+   id="tspan6071"
+   style="text-align:center;text-anchor:middle;stroke-width:0.01773946">NCC-1701</tspan></textPath></text>
+    </g>
+    <path
+       style="fill:none;stroke:none;stroke-width:0.31396794px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 136.71772,78.442708 c 2.509,-2.89978 2.89139,-6.301513 0,-9.898308"
+       id="path6080"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path6082"
+       d="m 139.24945,76.907814 c 1.40735,-2.055485 1.76466,-4.275682 0,-6.828737"
+       style="fill:none;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.46394378;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path6094"
+       cx="133.8817"
+       cy="73.372398"
+       r="7.8335757"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#8f8f8f;fill-opacity:1;stroke:#545454;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 129.8539,71.654105 c -0.46997,1.146955 -0.58744,2.304278 0,3.482333 1.54273,0.400886 3.10185,0.703484 4.82864,0 0,0 1.43404,-1.055055 1.43949,-1.708206 0.006,-0.672296 -1.43814,-1.774529 -1.43814,-1.774529 -1.37957,-0.511922 -2.89276,-0.726919 -4.82999,4.02e-4 z"
+       id="path6065"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccscc"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       transform="matrix(0.99795201,0,0,1.4390625,0.65827121,-50.810156)"
+       id="g6120"
+       inkscape:export-filename="/home/bridger/dev/8980-balloon/assets/img/enterprise.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         ry="0.63476515"
+         style="fill:#b2b2b2;fill-opacity:1;stroke:#545454;stroke-width:0.15834147;stroke-opacity:1"
+         id="rect6116"
+         width="14.769349"
+         height="1.6343452"
+         x="106.21651"
+         y="80.179108" />
+      <path
+         transform="rotate(-90)"
+         d="m -80.202317,120.60205 a 0.79395986,1.2059286 0 0 1 -0.39698,1.04437 0.79395986,1.2059286 0 0 1 -0.79396,0 0.79395986,1.2059286 0 0 1 -0.39698,-1.04437 l 0.79396,0 z"
+         sodipodi:end="3.1415927"
+         sodipodi:start="0"
+         sodipodi:ry="1.2059286"
+         sodipodi:rx="0.79395986"
+         sodipodi:cy="120.60205"
+         sodipodi:cx="-80.996277"
+         sodipodi:type="arc"
+         id="path6118"
+         style="fill:url(#linearGradient6122);fill-opacity:1;stroke:#e62727;stroke-width:0.17731258;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

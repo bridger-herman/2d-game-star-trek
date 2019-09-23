@@ -11,6 +11,7 @@ class GameObject {
         this.name = name;
         this.tags = [];
         this._transform = Transform2D.identity();
+        this._transform._gameObject = this;
         this._components = {};
         this._renderer = null;
     }
