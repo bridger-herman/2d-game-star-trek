@@ -11,6 +11,7 @@ class TimingSystem {
         TimingSystem._prevTime = window.performance.now();
     }
 
+    // Microsecond time
     static dt() {
         return window.performance.now() - TimingSystem._prevTime;
     }

@@ -97,10 +97,9 @@ class Transform2D {
     }
 
     debugDraw() {
-        strokeWeight(5);
-        stroke(0);
+        strokeWeight(10);
         point(this.globalPosition.x, this.globalPosition.y);
-        let arrowLen = 50;
+        let arrowLen = 20;
         strokeWeight(2);
         line(this.globalPosition.x, this.globalPosition.y,
             this.globalPosition.x + arrowLen * this.globalForward.x,

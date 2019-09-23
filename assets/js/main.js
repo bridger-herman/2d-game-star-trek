@@ -43,6 +43,6 @@ function draw() {
     GameObjectManager.update();
 
     GameObjectManager.draw();
-    document.title = `dt = ${TimingSystem.dt()}ns`
+    document.title = `dt = ${TimingSystem.dt()} microsec`
     TimingSystem.tick();
 }

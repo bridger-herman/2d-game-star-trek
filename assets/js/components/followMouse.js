@@ -65,6 +65,7 @@ class FollowMouseBehaviour extends Component {
         }
         if (this.currentCurve != null) {
             this.gameObject.transform = this.currentCurve.transformAt(this.currentTime);
+            // this.currentCurve.draw();
         }
     }
 }
