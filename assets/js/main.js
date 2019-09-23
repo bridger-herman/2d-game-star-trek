@@ -31,13 +31,10 @@ function setup() {
     photonLauncherRenderer.transform.position = createVector(30, 0);
     photonLauncherRenderer.renderer = new Renderer(photonLauncherRenderer,
         'photonLauncherRenderer');
-    photonLauncherRenderer.addComponent(new PhotonLauncher(photonLauncherRenderer, 0.1));
+    photonLauncherRenderer.addComponent(new PhotonLauncher(photonLauncherRenderer, 0.2));
 
-    // let enemy = GameObjectManager.instantiate('enemy');
-    // enemy.addComponent(new Health(enemy, 10));
-    // enemy.transform.position = createVector(width / 2, height / 2);
-    // enemy.renderer = new Renderer(enemy, '');
-    frameRate(30);
+    let enemySpawner = GameObjectManager.instantiate('enemySpawner');
+    enemySpawner.addComponent(new EnemySpawner(enemySpawner));
 }
 
 function draw() {
