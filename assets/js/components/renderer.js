@@ -8,10 +8,16 @@
 
 let enterprise;
 let borg;
+let borg_d1;
+let borg_d2;
+let borg_d3;
 
 function preload() {
     enterprise = loadImage('assets/img/enterprise.png');
     borg = loadImage('assets/img/borg3.jpg');
+    borg_d1 = loadImage('assets/img/borg3_damage1.jpg');
+    borg_d2 = loadImage('assets/img/borg3_damage2.jpg');
+    borg_d3 = loadImage('assets/img/borg3_damage3.jpg');
 }
 
 class Renderer {
@@ -49,6 +55,12 @@ class Renderer {
             circle(0, 0, 10);
         } else if (this._name == 'enemy') {
             image(borg, -50, -50, 100, 100);
+        } else if (this._name == 'enemy_d1') {
+            image(borg_d1, -50, -50, 100, 100);
+        } else if (this._name == 'enemy_d2') {
+            image(borg_d2, -50, -50, 100, 100);
+        } else if (this._name == 'enemy_d3') {
+            image(borg_d3, -50, -50, 100, 100);
         }
 
         // Pop the parent matrices
