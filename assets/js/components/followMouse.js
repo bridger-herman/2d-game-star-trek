@@ -6,8 +6,6 @@
  * Behaviour to make gameObject follow mouse clicks
  */
 
-const TIME_SCALE = 0.01;
-
 class FollowMouseBehaviour extends Component {
     constructor(gameObject) {
         super(gameObject);
@@ -18,7 +16,7 @@ class FollowMouseBehaviour extends Component {
     }
 
     update() {
-        this.currentTime += TIME_SCALE;
+        this.currentTime += TimingSystem.dt_ms();
         if (mouseIsPressed) {
             this.mouseDown = true;
         }

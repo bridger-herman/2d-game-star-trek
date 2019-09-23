@@ -14,6 +14,6 @@ class Velocity extends Component {
     }
 
     update() {
-        this.gameObject.transform.position.add(this.velocity);
+        this.gameObject.transform.position.add(p5.Vector.mult(this.velocity, TimingSystem.dt()));
     }
 }
